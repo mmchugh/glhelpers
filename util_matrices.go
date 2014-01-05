@@ -22,9 +22,9 @@ func LookAt(eyeX, eyeY, eyeZ, atX, atY, atZ, upX, upY, upZ float32) Mat4 {
 	y_axis := x_axis.Cross(z_axis)
 
 	return Mat4{
-		x_axis.X, y_axis.X, -z_axis.X, 0,
-		x_axis.Y, y_axis.Y, -z_axis.Y, 0,
-		x_axis.Z, y_axis.Z, -z_axis.Z, 0,
+		x_axis[0], y_axis[0], -z_axis[0], 0,
+		x_axis[1], y_axis[1], -z_axis[1], 0,
+		x_axis[2], y_axis[2], -z_axis[2], 0,
 		0, 0, 0, 1,
 	}.Translate(-eyeX, -eyeY, -eyeZ)
 }
